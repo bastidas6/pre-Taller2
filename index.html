@@ -19,7 +19,7 @@
 <body>
 
     <!-- Navegacion para adaptar a celucos-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <!-- Centrar contenido con la clase container -->
         <div class="container">
                 <a class="navbar-brand" href="#">Falcao García</a>
@@ -33,10 +33,10 @@
                       <a class="nav-link" href="#bio"> Biografía <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Muerte de su padre</a>
+                      <a class="nav-link" href="#info-muerte">Muerte de su padre</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Equipos</a>
+                      <a class="nav-link" href="#info-equipos">Equipos</a>
                     </li>
                   </ul>
                 </div>
@@ -49,26 +49,76 @@
         <!-- Margen hacia arriba de 5 -->
         <div class="container mt-5"> 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 my-auto">
                     <div class="header-content-left">
                         <!-- Para que ocupe todo el ancho de las 6 columnas -->
                         <img src="falcaoPortada.jpg" alt="No subio" style="width: 100%">
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 my-auto">
                     <div class="header-content-right">
                         <h1>Pagina de Falcao Garcia hecha por nosotros, los pillos.</h1>
-                        <p>Radamel Falcao García Zárate (Santa Marta, Magdalena, 10 de febrero de 1986),
+                        <p class="mt-5">Radamel Falcao García Zárate (Santa Marta, Magdalena, 10 de febrero de 1986),
                             es un futbolista colombiano que juega como delantero en la Association Sportive de 
                             Monaco Football Club de la Ligue 1 de Francia. Debutó profesionalmente en el extinto club
                             colombiano Lanceros Boyacá.4​ hoy conocido como Patriotas Boyacá, también es internacional 
-                            con la selección Colombia, de la cual es el máximo goleador histórico.</p>
-
+                            con la selección Colombia, de la cual es el máximo goleador histórico.</p>                        
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Testimonial -->
+    <section id="testimonio">
+      <div class="container">
+          <p class="h2 mb-2">
+            Me perdi el mundial, pase dos años horribles, pero Jesus restaura y lo hizo conmigo
+          </p>
+          <p class="h4">
+            - Falcao Garcia
+          </p>
+      </div>
+    </section>
+
+    <section id="info-muerte">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-md-6 my-auto">
+            <div class="info-left">
+              <img src="papaDeFalcao.jpeg" style="width: 100%;">
+            </div>
+          </div>
+          <div class="col-md-6 my-auto">
+            <div class="info-right">
+                <h2>Muerte del padre</h2>
+                <p>Según informaron familiares del exfutbolista, García King se desplomó y de inmediato sus allegados lo atendieron.
+                   Posteriormente fue trasladado al centro asistencial.
+
+                    El médico Genaro Gómez informó que Radamel García King llegó a la clínica, a las 8:30 de la noche, inconsciente.
+                    "Durante 45 minutos realizamos maniobras de reanimación, sin resultado alguno. El paciente fallece a las 9:15 de 
+                    la noche producto de un paro cardiorespiratorio", señaló.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id ="info-equipos">
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-md-6">
+            <h2>Mónaco</h2>
+            <p>Actualmente juega en el Mónaco donde lleva un total de 63 goles y 13 asistencias, con un media goleadora de 0,60 </p>
+          </div>
+          <div class="col-md-6">
+            <h2>Selección Colombia</h2>
+            <p>Es el maximo goleador de la selección Colombia con 32 goles y 7 asistencias con una media goleadora de 0,40</p>
+          </div>
+        </div>
+      </div>
+    </section>
     
 
     <!-- Scrpts de bootstrap -->
@@ -76,5 +126,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <!-- Scripst para efectos -->
+    <script>
+      window.sr = ScrollReveal();
+      sr.reveal('.navbar', {
+        duration: 2000,
+        origin: 'bottom'
+      })
+      sr.reveal('.header-content-left', {
+        duration: 2000,
+        origin: 'top',
+        distance: '300px'
+      })
+      sr.reveal('.header-content-right', {
+        duration: 2000,
+        origin: 'right',
+        distance: '300px'
+      })
+      sr.reveal('#testimonio', {
+        duration: 2000,
+        origin: 'left',
+        distance: '300px',
+        viewFactor: 0.8
+      })
+
+      // Esta parte es para deslizar mas bonito cuando le damos en el botn que nos lleva a otra seccion
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+    </script>
 </body>
 </html>
