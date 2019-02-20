@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Nuestro sitio web de Bootstrap</title>
+
+    <!--- Enlace para Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS propios -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Biblioteca de JS para simular efecto con scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script> 
+
+
+</head>
+<body>
+
+    <!-- Navegacion para adaptar a celucos-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Centrar contenido con la clase container -->
+        <div class="container">
+                <a class="navbar-brand" href="#">Falcao García</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Margin left auto, desplaza hacia la derecha -->
+                  <ul class="navbar-nav ml-auto "> 
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#bio"> Biografía <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Muerte de su padre</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Equipos</a>
+                    </li>
+                  </ul>
+                </div>
+        </div>   
+        </nav>
+
+    <!-- Cabecera -->
+    <header id="bio">
+        <!-- Contenedor de bootstrap -->
+        <!-- Margen hacia arriba de 5 -->
+        <div class="container mt-5"> 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="header-content-left">
+                        <!-- Para que ocupe todo el ancho de las 6 columnas -->
+                        <img src="falcaoPortada.jpg" alt="No subio" style="width: 100%">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="header-content-right">
+                        <h1>Pagina de Falcao Garcia hecha por nosotros, los pillos.</h1>
+                        <p>Radamel Falcao García Zárate (Santa Marta, Magdalena, 10 de febrero de 1986),
+                            es un futbolista colombiano que juega como delantero en la Association Sportive de 
+                            Monaco Football Club de la Ligue 1 de Francia. Debutó profesionalmente en el extinto club
+                            colombiano Lanceros Boyacá.4​ hoy conocido como Patriotas Boyacá, también es internacional 
+                            con la selección Colombia, de la cual es el máximo goleador histórico.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Scrpts de bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
